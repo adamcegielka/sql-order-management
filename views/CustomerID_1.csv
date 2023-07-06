@@ -1,0 +1,13 @@
+FirstName,LastName,OrderDate,TotalAmount
+John,Doe,2023-06-01,100.00
+John,Doe,2023-06-03,200.00
+John,Doe,2023-06-07,190.00
+John,Doe,2023-06-13,190.00
+John,Doe,2023-06-15,200.00
+John,Doe,2023-06-19,190.00
+John,Doe,2023-06-22,200.00
+John,Doe,2023-06-25,230.00
+John,Doe,2023-06-29,240.00
+John,Doe,2023-07-02,260.00
+John,Doe,2023-07-05,280.00
+John,Doe,2023-07-07,300.00
