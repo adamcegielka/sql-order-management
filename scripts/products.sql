@@ -1,0 +1,52 @@
+CREATE TABLE Products (
+  ProductID INT PRIMARY KEY,
+  ProductName VARCHAR(100),
+  UnitPrice DECIMAL(10, 2),
+  QuantityInStock INT
+);
+
+INSERT INTO Products (ProductID, ProductName, UnitPrice, QuantityInStock)
+VALUES
+  (1, 'Product A', 10.99, 100),
+  (2, 'Product B', 15.99, 75),
+  (3, 'Product C', 8.99, 120),
+  (4, 'Product D', 12.49, 50),
+  (5, 'Product E', 19.99, 200),
+  (6, 'Product F', 9.99, 90),
+  (7, 'Product G', 14.99, 60),
+  (8, 'Product H', 11.49, 110),
+  (9, 'Product I', 17.99, 80),
+  (10, 'Product J', 13.99, 150),
+  (11, 'Product K', 16.99, 70),
+  (12, 'Product L', 11.99, 100),
+  (13, 'Product M', 14.49, 90),
+  (14, 'Product N', 9.99, 120),
+  (15, 'Product O', 12.99, 80),
+  (16, 'Product P', 14.99, 85),
+  (17, 'Product Q', 10.99, 110),
+  (18, 'Product R', 12.49, 95),
+  (19, 'Product S', 16.99, 75),
+  (20, 'Product T', 9.99, 120),
+  (21, 'Product U', 13.99, 80),
+  (22, 'Product V', 9.99, 100),
+  (23, 'Product W', 12.49, 70),
+  (24, 'Product X', 16.99, 90),
+  (25, 'Product Y', 10.99, 120),
+  (26, 'Product Z', 14.99, 60),
+  (27, 'Product AA', 11.99, 85),
+  (28, 'Product BB', 13.49, 70),
+  (29, 'Product CC', 9.99, 100),
+  (30, 'Product DD', 12.99, 120),
+  (31, 'Product EE', 11.99, 75),
+  (32, 'Product FF', 10.99, 90),
+  (33, 'Product GG', 12.49, 110),
+  (34, 'Product HH', 14.99, 60),
+  (35, 'Product II', 9.99, 85),
+  (36, 'Product JJ', 12.99, 80),
+  (37, 'Product KK', 10.99, 95),
+  (38, 'Product LL', 14.49, 70),
+  (39, 'Product MM', 9.99, 120),
+  (40, 'Product NN', 11.99, 60),
+  (41, 'Product OO', 13.99, 85);
+  
+  SELECT * FROM products;
