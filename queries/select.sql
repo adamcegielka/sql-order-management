@@ -1,33 +1,33 @@
 -- Customers:
-SELECT * FROM customers;
-SELECT DISTINCT * FROM customers;
-SELECT firstname FROM customers;
-SELECT DISTINCT firstname FROM customers;
-SELECT city FROM customers;
-SELECT DISTINCT city FROM customers;
+SELECT * FROM Customers;
+SELECT DISTINCT * FROM Customers;
+SELECT FirstName FROM Customers;
+SELECT DISTINCT FirstName FROM Customers;
+SELECT City FROM Customers;
+SELECT DISTINCT City FROM Customers;
 
 -- Orderitems:
-SELECT * FROM orderitems;
-SELECT DISTINCT * FROM customers;
-SELECT quantity FROM orderitems;
-SELECT DISTINCT quantity FROM orderitems;
-SELECT price FROM orderitems;
-SELECT DISTINCT price FROM orderitems;
+SELECT * FROM Orderitems;
+SELECT DISTINCT * FROM Orderitems;
+SELECT Quantity FROM Orderitems;
+SELECT DISTINCT Quantity FROM Orderitems;
+SELECT Price FROM Orderitems;
+SELECT DISTINCT Price FROM Orderitems;
 
 -- Orders:
-SELECT * FROM orders;
-SELECT DISTINCT * FROM orders;
-SELECT customerid FROM orders;
-SELECT DISTINCT customerid FROM orders;
-SELECT totalamount FROM orders;
-SELECT DISTINCT totalamount FROM orders;
+SELECT * FROM Orders;
+SELECT DISTINCT * FROM Orders;
+SELECT CustomerID FROM Orders;
+SELECT DISTINCT CustomerID FROM Orders;
+SELECT TotalAmount FROM Orders;
+SELECT DISTINCT TotalAmount FROM Orders;
 
 -- Products:
-SELECT * FROM products;
-SELECT DISTINCT * FROM products;
-SELECT unitprice FROM products;
-SELECT DISTINCT unitprice FROM products;
-SELECT quantityinstock FROM products;
-SELECT DISTINCT quantityinstock FROM products;
+SELECT * FROM Products;
+SELECT DISTINCT * FROM Products;
+SELECT UnitPrice FROM Products;
+SELECT DISTINCT UnitPrice FROM Products;
+SELECT QuantityInStock FROM Products;
+SELECT DISTINCT QuantityInStock FROM Products;
 
 -- DISTINCT - Query without duplicates
