@@ -1,7 +1,7 @@
 -- LIMIT - CustomersCustomers
 SELECT * FROM Customers;
 SELECT * FROM Customers LIMIT 10;
-SELECT * FROM Customers ORDER BY LastName LIMIT 15;							-- counting by LastName
+SELECT * FROM Customers ORDER BY LastName LIMIT 15;			-- counting by LastName
 SELECT Customerid, FirstName, LastName, Email FROM Customers LIMIT 5; 		-- 5 firsts
 SELECT Customerid, FirstName, LastName, Email FROM Customers LIMIT 25,5;	-- 5 from 25
 SELECT Customerid, FirstName, LastName FROM Customers LIMIT 25 OFFSET 5;  	-- from 5 next 25
