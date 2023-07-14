@@ -57,6 +57,57 @@ LIMIT 3;
 -- MIN, MAX - OrderItems
 SELECT * FROM OrderItems;
 
+SELECT MIN(Price)
+FROM OrderItems;
+
+SELECT MAX(Price)
+FROM OrderItems;
+
+SELECT *
+FROM OrderItems
+WHERE Price = (
+	SELECT MIN(Price)
+    FROM OrderItems);
+    
+SELECT *
+FROM OrderItems
+WHERE OrderID = (
+	SELECT MAX(OrderID)
+    FROM OrderItems);
+    
+SELECT *
+FROM OrderItems
+WHERE Price = (
+	SELECT MIN(Price)
+    FROM OrderItems
+)
+ORDER BY Quantity;
+
+SELECT OrderItemID, Quantity, Price
+FROM OrderItems
+WHERE Price = (
+	SELECT MAX(Price)
+    FROM OrderItems
+)
+ORDER BY Product;
+
+SELECT OrderItemID, OrderID, Quantity, Price
+FROM OrderItems
+WHERE Quantity = (
+	SELECT MIN(Quantity)
+    FROM OrderItems
+)
+ORDER BY Price
+LIMIT 3;
+
+SELECT OrderItemID, OrderID, Quantity
+FROM OrderItems
+WHERE Price = (
+	SELECT MAX(Price)
+    FROM OrderItems
+)
+ORDER BY Quantity
+LIMIT 4;
 
 -- ------------------------------------------------------
 -- MIN, MAX - Orders
