@@ -21,6 +21,12 @@ FROM Customers
 WHERE NOT Address = '555 Elm St'
 AND City = 'Chicago';
 
+SELECT *
+FROM Customers
+WHERE FirstName = 'Mia'
+AND LastName = 'Adams'
+AND PostalCode = 94101;
+
 -- ------------------------------------------------------
 -- AND - OrderItems
 SELECT * FROM OrderItems;
@@ -44,6 +50,12 @@ SELECT Quantity, Price
 FROM OrderItems
 WHERE NOT Quantity = 3
 AND Price = 90.00;
+
+SELECT *
+FROM OrderItems
+WHERE OrderID = 4
+AND Quantity = 3
+AND Price = 65.00;
 
 -- ------------------------------------------------------
 -- AND - Orders
@@ -69,6 +81,12 @@ FROM Orders
 WHERE NOT OrderDate = '2023-07-07'
 AND TotalAmount = 290.00;
 
+SELECT *
+FROM Orders
+WHERE CustomerID = 4
+AND OrderDate = '2023-07-07'
+AND TotalAmount = 340.00;
+
 -- ------------------------------------------------------
 -- AND - Products
 SELECT * FROM Products;
@@ -92,3 +110,9 @@ SELECT ProductID, ProductName
 FROM Products
 WHERE NOT UnitPrice = 14.99
 AND QuantityInStock = 60;
+
+SELECT *
+FROM Products
+WHERE ProductName = 'Product K'
+AND UnitPrice = 16.99
+AND QuantityInStock = 70;
