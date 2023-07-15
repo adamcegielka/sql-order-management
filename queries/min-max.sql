@@ -113,8 +113,48 @@ LIMIT 4;
 -- MIN, MAX - Orders
 SELECT * FROM Orders;
 
+SELECT MIN(TotalAmount) AS MinTotalAmount
+FROM Orders;
+
+SELECT MAX(TotalAmount) AS MaxTotalAmount
+FROM Orders;
+
+SELECT *
+FROM Orders
+WHERE CustomerID = (
+    SELECT MIN(CustomerID)
+    FROM Orders
+)
+ORDER BY TotalAmount
+LIMIT 7;
+
+SELECT OrderID, CustomerID, TotalAmount
+FROM Orders
+WHERE CustomerID = (
+    SELECT MAX(CustomerID)
+    FROM Orders
+)
+ORDER BY TotalAmount
+LIMIT 5;
 
 -- ------------------------------------------------------
 -- MIN, MAX - Products
 SELECT * FROM Products;
 
+SELECT MIN(UnitPrice)
+FROM Products;
+
+SELECT MAX(QuantityInStock)
+FROM Products;
+
+SELECT *
+FROM Products
+WHERE UnitPrice = (
+    SELECT MIN(UnitPrice)
+    FROM Products);
+    
+SELECT *
+FROM Products
+WHERE QuantityInStock = (
+    SELECT MAX(QuantityInStock)
+    FROM Products);
