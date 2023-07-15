@@ -16,6 +16,16 @@ FROM Customers;
 SELECT DISTINCT City
 FROM Customers;
 
+SELECT COUNT(DISTINCT City)
+FROM Customers;
+
+SELECT COUNT(DISTINCT City) AS DistinctCity
+FROM Customers;
+
+SELECT COUNT(*) AS DistinctCity
+FROM (SELECT DISTINCT City
+      FROM Customers) AS CityList;
+
 -- ------------------------------------------------------
 -- Orderitems:
 SELECT * FROM Orderitems;
@@ -34,6 +44,16 @@ FROM Orderitems;
 
 SELECT DISTINCT Price
 FROM Orderitems;
+
+SELECT COUNT(DISTINCT Price)
+FROM Orderitems;
+
+SELECT COUNT(DISTINCT Price) AS DistinctPrices
+FROM Orderitems;
+
+SELECT COUNT(*) AS DistinctPrices
+FROM (SELECT DISTINCT Price
+      FROM Orderitems) AS PriceList;
 
 -- ------------------------------------------------------
 -- Orders:
@@ -54,6 +74,16 @@ FROM Orders;
 SELECT DISTINCT TotalAmount
 FROM Orders;
 
+SELECT COUNT(DISTINCT TotalAmount)
+FROM Orders;
+
+SELECT COUNT(DISTINCT TotalAmount) AS DistinctTotal
+FROM Orders;
+
+SELECT COUNT(*) AS DistinctTotal
+FROM (SELECT DISTINCT TotalAmount
+      FROM Orders) AS AmountList;
+
 -- ------------------------------------------------------
 -- Products:
 SELECT * FROM Products;
@@ -72,5 +102,15 @@ FROM Products;
 
 SELECT DISTINCT QuantityInStock
 FROM Products;
+
+SELECT COUNT(DISTINCT QuantityInStock)
+FROM Products;
+
+SELECT COUNT(DISTINCT QuantityInStock) AS DistinctQuantity
+FROM Products;
+
+SELECT COUNT(*) AS DistinctQuantity
+FROM (SELECT DISTINCT QuantityInStock
+      FROM Products) AS StockList;
 
 -- DISTINCT - Query without duplicates
