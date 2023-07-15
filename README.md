@@ -20,6 +20,17 @@ This project is an example of an order management system that uses a SQL databas
 - SQL database (e.g. MySQL)
 - SQL client or database management tool (e.g. MySQL Workbench)
 
+## Learning materials
+
+- [w3schools - SQL](https://www.w3schools.com/sql/)
+- [MySQL tworzenie i zarządzanie bazami danych](https://www.udemy.com/course/mysql-tworzenie-i-zarzadzanie-bazami-danych/)
+- [Kurs SQL od podstaw | MySQL](https://www.udemy.com/course/kurs-sql-od-podstaw/)
+- [Pasja informatyki - SQL](https://www.youtube.com/watch?v=99JAI24Zd24&list=PLOYHgt8dIdoymv-Wzvs8M-OsKFD31VTVZ)
+- [Kanał o Wszystkim - SQL](https://www.youtube.com/watch?v=BcZmEaX8u3w&list=PL6aekdNhY7DA1wcv-k2MtZxasDeGlre57)
+- [How to Use VS Code to Run SQL on a Database](https://www.youtube.com/watch?v=C0y35FpiLRA)
+- [MySQL Database Queries From VS Code](https://www.youtube.com/watch?v=3TMOTr8Zb28)
+- [you NEED to use VS Code RIGHT NOW!!](https://www.youtube.com/watch?v=1ZfO149BJvg)
+
 ## Author
 
 Author: [Adam Cegiełka](https://github.com/adamcegielka)
