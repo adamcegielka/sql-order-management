@@ -26,7 +26,7 @@ FROM Customers
 WHERE City
 NOT IN ('New York', 'Los Angeles');
 
--- ------------------------------------------------------
+-- ----------------------------------
 -- IN - OrderItems
 SELECT * FROM OrderItems;
 
@@ -55,7 +55,7 @@ FROM OrderItems
 WHERE Price
 NOT IN (55.00, 65.00);
 
--- ------------------------------------------------------
+-- ----------------------------------
 -- IN - Orders
 SELECT * FROM Orders;
 
@@ -84,7 +84,7 @@ FROM Orders
 WHERE CustomerID
 NOT IN (2, 4);
 
--- ------------------------------------------------------
+-- ----------------------------------
 -- IN - Products
 SELECT * FROM Products;
 

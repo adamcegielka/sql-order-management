@@ -53,7 +53,7 @@ WHERE PostalCode = (
 ORDER BY LastName
 LIMIT 3;
 
--- -------------------------------
+-- ----------------------------------
 -- MIN, MAX - OrderItems
 SELECT * FROM OrderItems;
 
@@ -109,7 +109,7 @@ WHERE Price = (
 ORDER BY Quantity
 LIMIT 4;
 
--- -------------------------------
+-- ----------------------------------
 -- MIN, MAX - Orders
 SELECT * FROM Orders;
 
@@ -137,7 +137,7 @@ WHERE CustomerID = (
 ORDER BY TotalAmount
 LIMIT 5;
 
--- -------------------------------
+-- ----------------------------------
 -- MIN, MAX - Products
 SELECT * FROM Products;
 

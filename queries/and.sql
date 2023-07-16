@@ -27,7 +27,7 @@ WHERE FirstName = 'Mia'
 AND LastName = 'Adams'
 AND PostalCode = 94101;
 
--- ------------------------------------------------------
+-- ----------------------------------
 -- AND - OrderItems
 SELECT * FROM OrderItems;
 
@@ -57,7 +57,7 @@ WHERE OrderID = 4
 AND Quantity = 3
 AND Price = 65.00;
 
--- ------------------------------------------------------
+-- ----------------------------------
 -- AND - Orders
 SELECT * FROM Orders;
 
@@ -87,7 +87,7 @@ WHERE CustomerID = 4
 AND OrderDate = '2023-07-07'
 AND TotalAmount = 340.00;
 
--- ------------------------------------------------------
+-- ----------------------------------
 -- AND - Products
 SELECT * FROM Products;
 

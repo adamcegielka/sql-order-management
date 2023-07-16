@@ -15,7 +15,7 @@ SELECT *
 FROM Customers
 WHERE City != 'New York';
 
--- ------------------------------------------------------
+-- ----------------------------------
 -- IS NULL, != - OrderItems
 SELECT * FROM OrderItems;
 
@@ -33,7 +33,7 @@ SELECT OrderItemID, OrderID, Product
 FROM OrderItems
 WHERE OrderID != 4;
 
--- ------------------------------------------------------
+-- ----------------------------------
 -- IS NULL, != - Orders
 SELECT * FROM Orders;
 
@@ -51,7 +51,7 @@ SELECT OrderID, CustomerID, TotalAmount
 FROM Orders
 WHERE TotalAmount != 180.00;
 
--- ------------------------------------------------------
+-- ----------------------------------
 -- IS NULL, != - Products
 SELECT * FROM Products;
 

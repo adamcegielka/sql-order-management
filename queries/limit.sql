@@ -38,7 +38,7 @@ SELECT DISTINCT City
 FROM Customers
 LIMIT 5;
 
--- ------------------------------------------------------
+-- ----------------------------------
 -- LIMIT - OrderItems
 SELECT * FROM OrderItems;
 
@@ -74,7 +74,7 @@ FROM OrderItems
 ORDER BY Price
 LIMIT 4;
 
--- ------------------------------------------------------
+-- ----------------------------------
 -- LIMIT - Orders
 SELECT * FROM Orders;
 
@@ -106,7 +106,7 @@ FROM Orders
 ORDER BY TotalAmount
 LIMIT 5;
 
--- ------------------------------------------------------
+-- ----------------------------------
 -- LIMIT - Products
 SELECT * FROM Products;
 

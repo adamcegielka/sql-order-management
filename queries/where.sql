@@ -34,7 +34,7 @@ SELECT Email
 FROM Customers
 WHERE NOT PostalCode = 90001;
 
--- ------------------------------------------------------
+-- ----------------------------------
 -- WHERE - OrderItems
 SELECT * FROM OrderItems;
 
@@ -67,7 +67,7 @@ SELECT OrderItemID, OrderID, Price
 FROM OrderItems
 WHERE NOT Price = 75;
 
--- ------------------------------------------------------
+-- ----------------------------------
 -- WHERE - Orders
 SELECT * FROM Orders;
 
@@ -100,7 +100,7 @@ SELECT OrderID, OrderDate, TotalAmount
 FROM Orders
 WHERE NOT CustomerID = 1;
 
--- ------------------------------------------------------
+-- ----------------------------------
 -- WHERE - Products
 SELECT * FROM Products;
 

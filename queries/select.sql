@@ -26,7 +26,7 @@ SELECT COUNT(*) AS DistinctCity
 FROM (SELECT DISTINCT City
       FROM Customers) AS CityList;
 
--- ------------------------------------------------------
+-- ----------------------------------
 -- Orderitems:
 SELECT * FROM Orderitems;
 
@@ -55,7 +55,7 @@ SELECT COUNT(*) AS DistinctPrices
 FROM (SELECT DISTINCT Price
       FROM Orderitems) AS PriceList;
 
--- ------------------------------------------------------
+-- ----------------------------------
 -- Orders:
 SELECT * FROM Orders;
 
@@ -84,7 +84,7 @@ SELECT COUNT(*) AS DistinctTotal
 FROM (SELECT DISTINCT TotalAmount
       FROM Orders) AS AmountList;
 
--- ------------------------------------------------------
+-- ----------------------------------
 -- Products:
 SELECT * FROM Products;
 

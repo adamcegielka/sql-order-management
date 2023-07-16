@@ -28,7 +28,7 @@ OR LastName = 'Adams'
 OR PostalCode = 94101
 ORDER BY Phone;
 
--- ------------------------------------------------------
+-- ----------------------------------
 -- OR - OrderItems
 SELECT * FROM OrderItems;
 
@@ -58,7 +58,7 @@ OR Quantity = 3
 OR Price = 65.00
 ORDER BY Price;
 
--- ------------------------------------------------------
+-- ----------------------------------
 -- OR - Orders
 SELECT * FROM Orders;
 
@@ -89,7 +89,7 @@ OR OrderDate = '2023-07-07'
 OR TotalAmount = 340.00
 ORDER BY TotalAmount;
 
--- ------------------------------------------------------
+-- ----------------------------------
 -- OR - Products
 SELECT * FROM Products;
 
