@@ -1,4 +1,4 @@
--- OR - CustomersCustomers
+-- OR - Customers
 SELECT * FROM Customers;
 
 SELECT *

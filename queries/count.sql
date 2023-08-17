@@ -1,4 +1,4 @@
--- COUNT() - CustomersCustomers
+-- COUNT() - Customers
 SELECT * FROM Customers;
 
 SELECT COUNT(*) 

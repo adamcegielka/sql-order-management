@@ -1,4 +1,4 @@
--- LIMIT - CustomersCustomers
+-- LIMIT - Customers
 SELECT * FROM Customers;
 
 SELECT *

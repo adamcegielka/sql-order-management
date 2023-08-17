@@ -1,4 +1,4 @@
--- SUM() - CustomersCustomers
+-- SUM() - Customers
 SELECT * FROM Customers;
 
 SELECT SUM(PostalCode) AS AverageOfPostalCode 

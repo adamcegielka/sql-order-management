@@ -1,4 +1,4 @@
--- MIN, MAX - CustomersCustomers
+-- MIN, MAX - Customers
 SELECT * FROM Customers;
 
 SELECT MIN(PostalCode)

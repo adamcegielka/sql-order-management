@@ -1,4 +1,4 @@
--- IS NULL, != - CustomersCustomers
+-- IS NULL, != - Customers
 SELECT * FROM Customers;
 
 SELECT *

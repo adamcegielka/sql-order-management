@@ -1,4 +1,4 @@
--- AVG() - CustomersCustomers
+-- AVG() - Customers
 SELECT * FROM Customers;
 
 SELECT AVG(PostalCode) AS AverageOfPostalCode 

@@ -1,4 +1,4 @@
--- AND - CustomersCustomers
+-- AND - Customers
 SELECT * FROM Customers;
 
 SELECT *
