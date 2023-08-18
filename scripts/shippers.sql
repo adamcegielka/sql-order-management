@@ -12,5 +12,7 @@ VALUES
 (4, 'Quick Delivery', '(503) 555-9191'),
 (5, 'Rapid Carriers', '(503) 555-1234');
 
-
 SELECT * FROM shippers;
+
+ALTER TABLE `shippers`
+  ADD PRIMARY KEY (`ShipperID`);
