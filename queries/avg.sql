@@ -12,7 +12,7 @@ GROUP BY City;
 -- AVG() - OrderItems
 SELECT * FROM OrderItems;
 
-SELECT Product, AVG(Price)
+SELECT AVG(Price)
 FROM OrderItems;
 
 SELECT AVG(DISTINCT Price)
