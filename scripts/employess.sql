@@ -26,3 +26,6 @@ VALUES
 (15, 'Moore', 'Noah', '1996-04-17', 'EmpID15.pic', 'Noah is a software developer specializing in building scalable and efficient backend systems.');
 
 SELECT * FROM Employees;
+
+ALTER TABLE `employees`
+  ADD PRIMARY KEY (`EmployeeID`);
