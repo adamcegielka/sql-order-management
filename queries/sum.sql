@@ -15,7 +15,7 @@ SELECT * FROM OrderItems;
 SELECT SUM(Price)
 FROM OrderItems;
 
-SELECT AVG(DISTINCT Price)
+SELECT SUM(DISTINCT Price)
 FROM OrderItems;
 
 SELECT OrderID, SUM(Price)
