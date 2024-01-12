@@ -1,4 +1,4 @@
-SHOW DATABASE; -- sprawdzenie dostępnych baz danych
+SHOW DATABASES; -- sprawdzenie dostępnych baz danych
 SHOW tables; -- wywołanie listy tabel dostępnych w aktywnej bazie
 DESC tableName; -- wywoływanie opisu tabeli
 SHOW COLUMNS FROM tableName; -- wywoływanie opisu tabeli - drugi sposób
@@ -10,10 +10,10 @@ CREATE TABLE tableName; -- tworzenie nowej tabeli
 DROP TABLE tableName; -- usuwanie tabeli
 DROP TABLE databaseName .tableName; -- usuwanie tabeli z bazy danych innej niż aktywna
 INSERT INTO tableName (columnName) VALUES ("newValue"); -- dodanie nowego rekordu
-HELP; -- uzyskanie pomocy
 HELP methodName; -- uzyskanie pomocy dla konkretnej metody
+HELP "SELECT"; -- uzyskanie pomocy o metodedzie SELECT
 SELECT * FROM tableName; -- wywoływanie wszystkich kolumn z tabeli
-SELECT columnName 1, columnName 2 FROM tableName; -- wywoływanie określonych kolumn z tabeli
+SELECT columnName_1, columnName_2 FROM tableName; -- wywoływanie określonych kolumn z tabeli
 
 -- ---------------------------------------------------
 -- SELECT DISTINCT -- -- Zapytanie bez duplikatów
@@ -34,9 +34,9 @@ SELECT * FROM tableName WHERE columnName = "recordValue"; -- Zapytanie o konkret
 -- AND, OR, IN, NOT --
 SELECT * FROM tableName WHERE columnName = "recordValue";
 SELECT * FROM tableName WHERE NOT columnName = "recordValue"; -- zapytanie o wszystkie rekordy oprócz określonego rekordu
-SELECT * FROM tableName WHERE columnName1 = "recordValue" AND columnName2 = "recordValue"; -- zapytanie o dwa rekordy
-SELECT * FROM tableName WHERE columnName1 = "recordValue" OR columnName2 = "recordValue"; -- zapytanie o jeden z rekordów
-SELECT * FROM tableName WHERE columnName IN ("recordValue1", "recordValue2", "recordValue3"); -- zapytanie o konkretne rekordy
+SELECT * FROM tableName WHERE columnName_1 = "recordValue" AND columnName_2 = "recordValue"; -- zapytanie o dwa rekordy
+SELECT * FROM tableName WHERE columnName_1 = "recordValue" OR columnName_2 = "recordValue"; -- zapytanie o jeden z rekordów
+SELECT * FROM tableName WHERE columnName IN ("recordValue_1", "recordValue_2", "recordValue_3"); -- zapytanie o konkretne rekordy
 
 -- -------------------------------------------------
 -- IS NULL, != --
@@ -78,47 +78,47 @@ SELECT * FROM tableName WHERE columnName LIKE "_______"; -- rekord ma w sobie 7 
 SELECT * FROM tableName WHERE columnName LIKE "__________%"; -- rekord ma w sobie minimum 10 literek i więcej
 SELECT * FROM tableName WHERE columnName >= "2022-08-01" AND columnName <= "2022-09-30";
 SELECT * FROM tableName WHERE columnName BETWEEN "2020-01-01" AND "2021-12-31"; -- krótsze zapytanie używając BETWEEN
-SELECT * FROM tableName WHERE columnName BETWEEN "3" AND "8";
+SELECT * FROM tableName WHERE columnName BETWEEN 3 AND 8;
 
 -- -------------------------------------------------
 -- AS - Aliasy -- -- zmiana nazwy kolumny
-SELECT columnName1, columnName2 FROM tableName;
-SELECT columnName1 AS "name Change1", columnName2 AS nameChange2 FROM tableName;
+SELECT columnName_1, columnName2 FROM tableName;
+SELECT columnName_1 AS nameChange_1, columnName_2 AS nameChange_2 FROM tableName;
 SELECT SUM(columnName) AS nameChange FROM tableName;
 
 -- -------------------------------------------------
 -- ORDER BY -- -- sortowanie rosnąco i malejąco
-SELECT columnName, columnName1 FROM tableName ORDER BY columnName1; -- domyślnie rosnąco
-SELECT columnName, columnName1 FROM tableName ORDER BY columnName1 ASC; -- rosnąco
-SELECT columnName, columnName1 FROM tableName ORDER BY columnName1 DESC; -- malejąco
+SELECT columnName, columnName_1 FROM tableName ORDER BY columnName_1; -- domyślnie rosnąco
+SELECT columnName, columnName_1 FROM tableName ORDER BY columnName_1 ASC; -- rosnąco
+SELECT columnName, columnName_1 FROM tableName ORDER BY columnName_1 DESC; -- malejąco
 -- sortowanie w wielu kolumnach
-SELECT columnName1, columnName2 FROM tableName ORDER BY columnName2 ASC, columnName1 DESC;
-SELECT columnName2, columnName1 FROM tableName ORDER BY columnName2 ASC, columnName1 ASC; -- zmiana kolejności kolumn
+SELECT columnName_1, columnName_2 FROM tableName ORDER BY columnName_2 ASC, columnName_1 DESC;
+SELECT columnName_2, columnName_1 FROM tableName ORDER BY columnName_2 ASC, columnName_1 ASC; -- zmiana kolejności kolumn
 
 -- -------------------------------------------------
 -- GROUP BY, HAVING -- -- grupowanie wierszy, które mają te same wartości - podsumowanie
-SELECT columnName SUM(columnName1) FROM tableName GROUP BY columnName;
-SELECT columnName SUM(columnName1) FROM tableName GROUP BY columnName ORDER BY SUM(columnName1) ;
-SELECT columnName, columnName1 SUM(columnName2) FROM tableName GROUP BY columnName, columnName1;
-SELECT columnName, columnName1 SUM(columnName2) FROM tableName GROUP BY columnName, columnName1 ORDER BY SUM(columnName2) ;
+SELECT columnName, SUM(columnName_1) FROM tableName GROUP BY columnName;
+SELECT columnName, SUM(columnName_1) FROM tableName GROUP BY columnName ORDER BY SUM(columnName1) ;
+SELECT columnName, columnName_1, SUM(columnName_2) FROM tableName GROUP BY columnName, columnName_1;
+SELECT columnName, columnName_1, SUM(columnName_2) FROM tableName GROUP BY columnName, columnName_1 ORDER BY SUM(columnName_2) ;
 -- grupowanie i dodanie warunku przedziału wskazanej kolumny od 2 do 6
-SELECT columnName, columnName1 SUM(columnName2) FROM tableName WHERE columnName BETWEEN 2 AND 6 GROUP BY columnName, columnName1;
+SELECT columnName, columnName_1, SUM(columnName_2) FROM tableName WHERE columnName BETWEEN 2 AND 6 GROUP BY columnName, columnName_1;
 -- obliczenie różnicy między całkowitą liczbą wpisów a liczbą duplikatów
-SELECT columnName COUNT(columnName) – COUNT(DISTINCT (columnName)) FROM tableName;
-SELECT columnName1 COUNT(columnName2) AS nameChange FROM tableName GROUP BY columnName1 ORDER BY COUNT(columnName2) DESC;
-SELECT columnName1, columnName3 COUNT(columnName2) AS nameChange FROM tableName GROUP BY columnName1, columnName3;
+SELECT columnName, COUNT(columnName) - COUNT(DISTINCT (columnName)) FROM tableName;
+SELECT columnName_1, COUNT(columnName_2) AS nameChange FROM tableName GROUP BY columnName_1 ORDER BY COUNT(columnName_2) DESC;
+SELECT columnName_1, columnName_3, COUNT(columnName_2) AS nameChange FROM tableName GROUP BY columnName_1, columnName_3;
 -- klauzula HAVING jest dodana do SQL, ponieważ WHERE nie może być używane z funkcjami
-SELECT columnName1 COUNT(columnName2) AS nameChange FROM tableName GROUP BY columnName1 HAVING COUNT(columnName2) > 5;
+SELECT columnName_1, COUNT(columnName_2) AS nameChange FROM tableName GROUP BY columnName_1 HAVING COUNT(columnName_2) > 5;
 
 -- -------------------------------------------------
 -- INSERT INTO -- -- dodanie nowego rekordu
-INSERT INTO tableName (columnName1, columnName2, columnName3) VALUES ("newValue1", "newValue2", "newValue3");
-INSERT INTO tableName (columnName1, columnName2, columnName3) VALUES -- dodanie kilku nowych rekordów
-("newValue1a", "newValue2a", "newValue3a"),
-("newValue1b", "newValue2b", "newValue3b"),
-("newValue1c", "newValue2c", "newValue3c");
-INSERT INTO tableName VALUES ("newValue1", "newValue2", "newValue3"); -- szybsze dodanie nowego rekordu
-INSERT INTO tableName VALUES (NULL, "newValue2", "newValue3"); -- automatyczna inkrementacja ID
+INSERT INTO tableName (columnName_1, columnName_2, columnName_3) VALUES ("newValue1_", "newValue_2", "newValue_3");
+INSERT INTO tableName (columnName_1, columnName_2, columnName_3) VALUES -- dodanie kilku nowych rekordów
+("newValue_1a", "newValue_2a", "newValue_3a"),
+("newValue_1b", "newValue_2b", "newValue_3b"),
+("newValue_1c", "newValue_2c", "newValue_3c");
+INSERT INTO tableName VALUES ("newValue_1", "newValue_2", "newValue_3"); -- szybsze dodanie nowego rekordu
+INSERT INTO tableName VALUES (NULL, "newValue_2", "newValue_3"); -- automatyczna inkrementacja ID
 
 -- -------------------------------------------------
 -- UPDATE -- -- aktualizacja rekordu
