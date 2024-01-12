@@ -36,7 +36,7 @@ SELECT * FROM tableName WHERE columnName = "recordValue";
 SELECT * FROM tableName WHERE NOT columnName = "recordValue"; -- zapytanie o wszystkie rekordy oprócz określonego rekordu
 SELECT * FROM tableName WHERE columnName1 = "recordValue" AND columnName2 = "recordValue"; -- zapytanie o dwa rekordy
 SELECT * FROM tableName WHERE columnName1 = "recordValue" OR columnName2 = "recordValue"; -- zapytanie o jeden z rekordów
-SELECT * FROM tableName WHERE columnName IN ("recordValue1", "recordValue2", "recordValue3) "; -- zapytanie o konkretne rekordy
+SELECT * FROM tableName WHERE columnName IN ("recordValue1", "recordValue2", "recordValue3"); -- zapytanie o konkretne rekordy
 
 -- -------------------------------------------------
 -- IS NULL, != --
