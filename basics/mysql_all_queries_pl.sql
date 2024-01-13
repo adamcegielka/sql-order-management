@@ -8,7 +8,7 @@ CREATE DATABASE databaseName; -- tworzenie nowej bazy danych
 DROP DATABASE databaseName; -- usuwanie bazy danych i tabel w niej zawartych
 CREATE TABLE tableName; -- tworzenie nowej tabeli
 DROP TABLE tableName; -- usuwanie tabeli
-DROP TABLE databaseName .tableName; -- usuwanie tabeli z bazy danych innej niż aktywna
+DROP TABLE databaseName.tableName; -- usuwanie tabeli z bazy danych innej niż aktywna
 INSERT INTO tableName (columnName) VALUES ("newValue"); -- dodanie nowego rekordu
 HELP methodName; -- uzyskanie pomocy dla konkretnej metody
 HELP "SELECT"; -- uzyskanie pomocy o metodedzie SELECT
@@ -125,6 +125,7 @@ INSERT INTO tableName VALUES (NULL, "newValue_2", "newValue_3"); -- automatyczna
 UPDATE tableName SET columnName = "changeValue" WHERE columnNameID = 4;
 -- aktualizacja wszystkich rekordów, gdzie występują te same nazwy
 UPDATE tableName SET columnName1 = "changeValue1", columnName2 = "changeValue2" WHERE columnName2 = Value2;
+
 -- -------------------------------------------------
 -- DELETE -- -- usuwanie rekordu
 DELETE FROM tableName WHERE columnName LIKE "recordValue";
